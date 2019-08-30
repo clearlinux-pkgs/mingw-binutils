@@ -200,4 +200,4 @@ cat *.lang > %{name}.lang
 
 
 %files locale
-/usr/share/locale/
+%exclude /usr/share/locale/
