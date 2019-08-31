@@ -179,7 +179,7 @@ cat *.lang > %{name}.lang
 
 %exclude /usr/bin/ar
 %exclude    /usr/bin/as
-%exclude    /usr/bin/dlltool
+/usr/bin/dlltool
 %exclude    /usr/bin/nm
 %exclude    /usr/bin/objcopy
 %exclude    /usr/bin/objdump
