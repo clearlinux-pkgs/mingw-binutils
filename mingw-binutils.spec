@@ -128,6 +128,7 @@ make %{?_smp_flags} tooldir=/usr
 export SOURCE_DATE_EPOCH=1549215809 
 make %{?_smp_flags} tooldir=/usr DESTDIR=%{buildroot} install
 install -d %{buildroot}%{_prefix}/include
+ln -s mingw %{buildroot}/usr/x86_64-w64-mingw32
 
 
 %find_lang binutils bin.lang
@@ -139,6 +140,7 @@ install -d %{buildroot}%{_prefix}/include
 cat *.lang > %{name}.lang
 
 %files
+/usr/x86_64-w64-mingw32
 /usr/bin/x86_64-w64-mingw32-addr2line
 /usr/bin/x86_64-w64-mingw32-ar
 /usr/bin/x86_64-w64-mingw32-as
