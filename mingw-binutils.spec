@@ -108,7 +108,7 @@ sed -i -e "s/#define BFD_VERSION_DATE.*/#define BFD_VERSION_DATE 20190203/g" bfd
     --enable-shared --disable-static \
     --target=x86_64-w64-mingw32	 \
     --build=%{binutils_target} \
-    --libdir=/usr/lib64 \
+    --libdir=/usr/mingw/lib \
     --includedir=/usr/include \
     --enable-deterministic-archives \
     --enable-lto \
@@ -116,7 +116,7 @@ sed -i -e "s/#define BFD_VERSION_DATE.*/#define BFD_VERSION_DATE 20190203/g" bfd
     --enable-gold \
     --enable-secureplt \
     --with-sysroot=/usr/x86_64-w64-mingw32/sys-root \
-    --with-lib-path=/usr/lib64/mingw32:/usr/lib64:/usr/lib32:/usr/lib \
+    --with-lib-path=/usr/mingw/lib:/usr/lib64/mingw32:/usr/lib64:/usr/lib32:/usr/lib \
     --enable-targets=x86_64-w64-mingw32,i686-w64-mingw32	 \
     --disable-werror
 make %{?_smp_flags} tooldir=/usr
