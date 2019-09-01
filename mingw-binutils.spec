@@ -129,6 +129,7 @@ export SOURCE_DATE_EPOCH=1549215809
 make %{?_smp_flags} tooldir=/usr DESTDIR=%{buildroot} install
 install -d %{buildroot}%{_prefix}/include
 ln -s mingw %{buildroot}/usr/x86_64-w64-mingw32
+ln -s x86_64-w64-mingw32-windres %{buildroot}/usr/bin/windres
 
 
 %find_lang binutils bin.lang
@@ -161,6 +162,7 @@ cat *.lang > %{name}.lang
 /usr/bin/x86_64-w64-mingw32-strip
 /usr/bin/x86_64-w64-mingw32-windmc
 /usr/bin/x86_64-w64-mingw32-windres
+/usr/bin/windres
 /usr/lib/ldscripts/i386pe.x
 /usr/lib/ldscripts/i386pe.xa
 /usr/lib/ldscripts/i386pe.xbn
