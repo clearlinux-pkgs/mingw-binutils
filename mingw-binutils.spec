@@ -5,13 +5,13 @@
 %define binutils_target %{_arch}-generic-linux
 
 Name:           mingw-binutils
-Version:        2.32
+Version:        2.33.1
 Release:        308
 License:        GPL-3.0
 Summary:        GNU binary utilities
 Url:            http://www.gnu.org/software/binutils/
 Group:          devel
-Source0:        https://mirrors.kernel.org/gnu/binutils/binutils-2.32.tar.xz
+Source0:        https://mirrors.kernel.org/gnu/binutils/binutils-2.33.1.tar.xz
 BuildRequires:  flex
 BuildRequires:  libstdc++-dev
 BuildRequires:  dejagnu
@@ -29,7 +29,6 @@ Patch1:         binutils-stable-branch.patch
 Patch2:         binutils-add-LD_AS_NEEDED-global-env.patch
 
 # CVEs
-Patch3: CVE-2019-9077.patch
 Patch4: CVE-2019-9076.patch
 Patch5: CVE-2019-9075.patch
 Patch6: CVE-2019-9074.patch
@@ -82,20 +81,12 @@ GNU binary utilities.
 
 
 %prep
-%setup -q -n binutils-2.32
+%setup -q -n binutils-2.33.1
 
 %patch1 -p1
 %patch2 -p1
 
 # CVEs
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
-%patch6 -p1
-%patch7 -p1
-%patch8 -p1
-%patch9 -p1
-%patch10 -p1
 %patch11 -p1
 
 %patch100 -p1
