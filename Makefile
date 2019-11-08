@@ -1,5 +1,5 @@
 PKG_NAME := mingw-binutils
-URL := https://mirrors.kernel.org/gnu/binutils/binutils-2.31.1.tar.xz
+URL := https://mirrors.kernel.org/gnu/binutils/binutils-2.33.1.tar.xz
 include ../common/Makefile.common
 
 update:

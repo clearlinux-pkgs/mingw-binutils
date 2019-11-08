@@ -37,6 +37,7 @@ Patch8: CVE-2019-12972.patch
 Patch9: CVE-2019-14250.patch
 Patch10: CVE-2019-14444.patch
 Patch11: CVE-2019-17450.patch
+Patch12: CVE-2019-17451.patch
 
 Patch100: binutils-2.20.51.0.2-libtool-lib64.patch
 
@@ -88,6 +89,7 @@ GNU binary utilities.
 
 # CVEs
 %patch11 -p1
+%patch12 -p1
 
 %patch100 -p1
 
