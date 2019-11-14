@@ -21,7 +21,7 @@ BuildRequires:  glibc-staticdev
 BuildRequires:  zlib-dev
 BuildRequires:  texinfo
 BuildRequires:  bison
-BuildRequires:  mingw-gcc
+BuildRequires:  mingw-gcc mingw-binutils
 BuildRequires:  mingw-crt mingw-crt-dev
 Requires:       binutils-info
 
