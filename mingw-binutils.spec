@@ -6,7 +6,7 @@
 
 Name:           mingw-binutils
 Version:        2.33.1
-Release:        310
+Release:        311
 License:        GPL-3.0
 Summary:        GNU binary utilities
 Url:            http://www.gnu.org/software/binutils/
@@ -23,7 +23,7 @@ BuildRequires:  texinfo
 BuildRequires:  bison
 BuildRequires:  mingw-gcc mingw-binutils
 BuildRequires:  mingw-crt mingw-crt-dev
-Requires:       binutils-doc
+Requires:       binutils-info
 
 Patch1:         binutils-stable-branch.patch
 Patch2:         binutils-add-LD_AS_NEEDED-global-env.patch
