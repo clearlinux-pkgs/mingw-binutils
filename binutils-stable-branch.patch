@@ -130,19 +130,6 @@ index 9c457c3d91..501bc01088 100644
  "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
  "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
  "Language-Team: LANGUAGE <LL@li.org>\n"
-diff --git a/bfd/version.h b/bfd/version.h
-index c54e28f89a..7ab5ae8c4b 100644
---- a/bfd/version.h
-+++ b/bfd/version.h
-@@ -16,7 +16,7 @@
- 
-    In releases, the date is not included in either version strings or
-    sonames.  */
--#define BFD_VERSION_DATE 20200201
-+#define BFD_VERSION_DATE 20200208
- #define BFD_VERSION @bfd_version@
- #define BFD_VERSION_STRING  @bfd_version_package@ @bfd_version_string@
- #define REPORT_BUGS_TO @report_bugs_to@
 diff --git a/bfd/version.m4 b/bfd/version.m4
 index 697d7097e6..367775a83a 100644
 --- a/bfd/version.m4
