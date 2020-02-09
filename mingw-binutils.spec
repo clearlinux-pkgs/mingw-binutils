@@ -1,17 +1,14 @@
-# IMPORTANT NOTE: It is required to rebuild the linux-tools and cairo packages
-# after a version change! These packages use "libbfd".
-#
 
 %define binutils_target %{_arch}-generic-linux
 
 Name:           mingw-binutils
-Version:        2.33.1
+Version:        2.34
 Release:        320
 License:        GPL-3.0
 Summary:        GNU binary utilities
 Url:            http://www.gnu.org/software/binutils/
 Group:          devel
-Source0:        https://mirrors.kernel.org/gnu/binutils/binutils-2.33.1.tar.xz
+Source0:        https://mirrors.kernel.org/gnu/binutils/binutils-2.34.tar.xz
 BuildRequires:  flex
 BuildRequires:  libstdc++-dev
 BuildRequires:  dejagnu
@@ -29,15 +26,6 @@ Patch1:         binutils-stable-branch.patch
 Patch2:         binutils-add-LD_AS_NEEDED-global-env.patch
 
 # CVEs
-Patch4: CVE-2019-9076.patch
-Patch5: CVE-2019-9075.patch
-Patch6: CVE-2019-9074.patch
-Patch7: CVE-2019-9071.patch
-Patch8: CVE-2019-12972.patch
-Patch9: CVE-2019-14250.patch
-Patch10: CVE-2019-14444.patch
-Patch11: CVE-2019-17450.patch
-Patch12: CVE-2019-17451.patch
 
 Patch100: binutils-2.20.51.0.2-libtool-lib64.patch
 
@@ -82,14 +70,12 @@ GNU binary utilities.
 
 
 %prep
-%setup -q -n binutils-2.33.1
+%setup -q -n binutils-2.34
 
 %patch1 -p1
 %patch2 -p1
 
 # CVEs
-%patch11 -p1
-%patch12 -p1
 
 %patch100 -p1
 
@@ -173,6 +159,17 @@ cat *.lang > %{name}.lang
 /usr/lib/ldscripts/i386pep.xr
 /usr/lib/ldscripts/i386pep.xu
 
+
+%exclude   /usr/include/ctf-api.h
+%exclude    /usr/include/ctf.h
+   /usr/mingw/lib/libctf-nobfd.la
+   /usr/mingw/lib/libctf-nobfd.so
+   /usr/mingw/lib/libctf-nobfd.so.0
+   /usr/mingw/lib/libctf-nobfd.so.0.0.0
+   /usr/mingw/lib/libctf.la
+   /usr/mingw/lib/libctf.so
+   /usr/mingw/lib/libctf.so.0
+   /usr/mingw/lib/libctf.so.0.0.0
 
 /usr/x86_64-generic-linux/x86_64-w64-mingw32/
 
