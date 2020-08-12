@@ -1,13 +1,7 @@
-#!/usr/bin/bash
-git commit -m "stable branch update" binutils-stable-branch.patch
-make bump
+#!/bin/bash
+
+spec=mingw-binutils.spec
+patch=binutils-stable-branch.patch
+make bumpnogit
+git commit -m "Stable branch update" $spec $patch release
 make koji
-sleep 120
-pushd ../linux-tools
-make bump
-make koji-nowait
-popd
-pushd ../gdb
-make bump
-make koji-nowait
-popd
