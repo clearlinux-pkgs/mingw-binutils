@@ -3,7 +3,7 @@
 
 Name:           mingw-binutils
 Version:        2.35.1
-Release:        371
+Release:        372
 License:        GPL-3.0
 Summary:        GNU binary utilities
 Url:            http://www.gnu.org/software/binutils/
@@ -99,7 +99,8 @@ sed -i -e "s/#define BFD_VERSION_DATE.*/#define BFD_VERSION_DATE 20190203/g" bfd
     --with-sysroot=/usr/x86_64-w64-mingw32/sys-root \
     --with-lib-path=/usr/mingw/lib:/usr/lib64/mingw32:/usr/lib64:/usr/lib32:/usr/lib \
     --enable-targets=x86_64-w64-mingw32,i686-w64-mingw32	 \
-    --disable-werror
+    --disable-werror \
+    --without-debuginfod
 make %{?_smp_flags} tooldir=/usr
 
 %check
