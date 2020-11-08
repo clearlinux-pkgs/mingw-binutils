@@ -3,7 +3,7 @@
 
 Name:           mingw-binutils
 Version:        2.35.1
-Release:        378
+Release:        379
 License:        GPL-3.0
 Summary:        GNU binary utilities
 Url:            http://www.gnu.org/software/binutils/
