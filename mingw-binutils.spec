@@ -159,31 +159,26 @@ cat *.lang > %{name}.lang
 /usr/lib/ldscripts/i386pep.xn
 /usr/lib/ldscripts/i386pep.xr
 /usr/lib/ldscripts/i386pep.xu
-
-
-%exclude   /usr/include/ctf-api.h
-%exclude    /usr/include/ctf.h
-   /usr/mingw/lib/libctf-nobfd.la
-   /usr/mingw/lib/libctf-nobfd.so
-   /usr/mingw/lib/libctf-nobfd.so.0
-   /usr/mingw/lib/libctf-nobfd.so.0.0.0
-   /usr/mingw/lib/libctf.la
-   /usr/mingw/lib/libctf.so
-   /usr/mingw/lib/libctf.so.0
-   /usr/mingw/lib/libctf.so.0.0.0
-
+%exclude /usr/include/ctf-api.h
+%exclude /usr/include/ctf.h
+/usr/mingw/lib/libctf-nobfd.la
+/usr/mingw/lib/libctf-nobfd.so
+/usr/mingw/lib/libctf-nobfd.so.0
+/usr/mingw/lib/libctf-nobfd.so.0.0.0
+/usr/mingw/lib/libctf.la
+/usr/mingw/lib/libctf.so
+/usr/mingw/lib/libctf.so.0
+/usr/mingw/lib/libctf.so.0.0.0
 /usr/x86_64-generic-linux/x86_64-w64-mingw32/
-
 %exclude /usr/bin/ar
-%exclude    /usr/bin/as
+%exclude /usr/bin/as
 /usr/bin/dlltool
-%exclude    /usr/bin/nm
-%exclude    /usr/bin/objcopy
-%exclude    /usr/bin/objdump
-%exclude    /usr/bin/ranlib
-%exclude    /usr/bin/readelf
-%exclude    /usr/bin/strip
-
+%exclude /usr/bin/nm
+%exclude /usr/bin/objcopy
+%exclude /usr/bin/objdump
+%exclude /usr/bin/ranlib
+%exclude /usr/bin/readelf
+%exclude /usr/bin/strip
 
 %files extras
 
@@ -196,7 +191,6 @@ cat *.lang > %{name}.lang
 %exclude /usr/share/info/binutils.info
 %exclude /usr/share/info/gprof.info
 %exclude /usr/share/info/ld.info
-
 
 %files locale
 %exclude /usr/share/locale/
