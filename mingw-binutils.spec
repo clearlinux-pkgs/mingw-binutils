@@ -2,13 +2,13 @@
 %define binutils_target %{_arch}-generic-linux
 
 Name:           mingw-binutils
-Version:        2.35.1
-Release:        391
+Version:        2.36
+Release:        392
 License:        GPL-3.0
 Summary:        GNU binary utilities
 Url:            http://www.gnu.org/software/binutils/
 Group:          devel
-Source0:        https://mirrors.kernel.org/gnu/binutils/binutils-2.35.1.tar.xz
+Source0:        https://mirrors.kernel.org/gnu/binutils/binutils-2.36.tar.xz
 BuildRequires:  flex
 BuildRequires:  libstdc++-dev
 BuildRequires:  dejagnu
@@ -70,7 +70,7 @@ GNU binary utilities.
 
 
 %prep
-%setup -q -n binutils-2.35.1
+%setup -q -n binutils-2.36
 
 %patch1 -p1
 %patch2 -p1
