@@ -161,6 +161,7 @@ cat *.lang > %{name}.lang
 /usr/lib/ldscripts/i386pep.xu
 %exclude /usr/include/ctf-api.h
 %exclude /usr/include/ctf.h
+/usr/mingw/lib/bfd-plugins/libdep.so
 /usr/mingw/lib/libctf-nobfd.la
 /usr/mingw/lib/libctf-nobfd.so
 /usr/mingw/lib/libctf-nobfd.so.0
