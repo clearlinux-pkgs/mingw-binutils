@@ -9,6 +9,7 @@ Summary:        GNU binary utilities
 Url:            http://www.gnu.org/software/binutils/
 Group:          devel
 Source0:        https://mirrors.kernel.org/gnu/binutils/binutils-2.36.1.tar.xz
+AutoReqProv:    No
 BuildRequires:  flex
 BuildRequires:  libstdc++-dev
 BuildRequires:  dejagnu
