@@ -37,7 +37,7 @@ GNU binary utilities.
 License:        GPL-3.0
 Summary:        GNU binary utilities
 Group:          devel
-Provides: binutils-devel
+Provides: mingw-binutils-devel
 
 %description dev
 GNU binary utilities.
