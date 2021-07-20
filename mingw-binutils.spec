@@ -2,13 +2,13 @@
 %define binutils_target %{_arch}-generic-linux
 
 Name:           mingw-binutils
-Version:        2.36.1
-Release:        427
+Version:        2.37
+Release:        428
 License:        GPL-3.0
 Summary:        GNU binary utilities
 Url:            http://www.gnu.org/software/binutils/
 Group:          devel
-Source0:        https://mirrors.kernel.org/gnu/binutils/binutils-2.36.1.tar.xz
+Source0:        https://mirrors.kernel.org/gnu/binutils/binutils-2.37.tar.xz
 AutoReqProv:    No
 BuildRequires:  flex
 BuildRequires:  libstdc++-dev
@@ -71,9 +71,9 @@ GNU binary utilities.
 
 
 %prep
-%setup -q -n binutils-2.36.1
+%setup -q -n binutils-2.37
 
-%patch1 -p1
+#patch1 -p1
 %patch2 -p1
 
 # CVEs
@@ -102,10 +102,10 @@ sed -i -e "s/#define BFD_VERSION_DATE.*/#define BFD_VERSION_DATE 20190203/g" bfd
     --enable-targets=x86_64-w64-mingw32,i686-w64-mingw32	 \
     --disable-werror \
     --without-debuginfod
-make %{?_smp_flags} tooldir=/usr
+make %{?_smp_flags} -O tooldir=/usr
 
 %check
-#make %{?_smp_flags} check tooldir=/usr || :
+#make %{?_smp_flags} -O check tooldir=/usr || :
 
 %install
 export SOURCE_DATE_EPOCH=1549215809 
