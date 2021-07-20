@@ -3,7 +3,7 @@
 
 Name:           mingw-binutils
 Version:        2.37
-Release:        428
+Release:        429
 License:        GPL-3.0
 Summary:        GNU binary utilities
 Url:            http://www.gnu.org/software/binutils/
@@ -73,7 +73,7 @@ GNU binary utilities.
 %prep
 %setup -q -n binutils-2.37
 
-#patch1 -p1
+%patch1 -p1
 %patch2 -p1
 
 # CVEs
