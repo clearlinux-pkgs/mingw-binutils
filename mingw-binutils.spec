@@ -3,7 +3,7 @@
 
 Name:           mingw-binutils
 Version:        2.37
-Release:        434
+Release:        435
 License:        GPL-3.0
 Summary:        GNU binary utilities
 Url:            http://www.gnu.org/software/binutils/
@@ -163,11 +163,9 @@ cat *.lang > %{name}.lang
 %exclude /usr/include/ctf-api.h
 %exclude /usr/include/ctf.h
 /usr/mingw/lib/bfd-plugins/libdep.so
-/usr/mingw/lib/libctf-nobfd.la
 /usr/mingw/lib/libctf-nobfd.so
 /usr/mingw/lib/libctf-nobfd.so.0
 /usr/mingw/lib/libctf-nobfd.so.0.0.0
-/usr/mingw/lib/libctf.la
 /usr/mingw/lib/libctf.so
 /usr/mingw/lib/libctf.so.0
 /usr/mingw/lib/libctf.so.0.0.0
