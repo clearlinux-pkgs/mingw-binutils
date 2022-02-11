@@ -3,7 +3,7 @@
 
 Name:           mingw-binutils
 Version:        2.38
-Release:        439
+Release:        440
 License:        GPL-3.0
 Summary:        GNU binary utilities
 Url:            http://www.gnu.org/software/binutils/
@@ -34,15 +34,6 @@ Patch100: binutils-2.20.51.0.2-libtool-lib64.patch
 %description
 GNU binary utilities.
 
-%package dev
-License:        GPL-3.0
-Summary:        GNU binary utilities
-Group:          devel
-Provides: mingw-binutils-devel
-
-%description dev
-GNU binary utilities.
-
 %package doc
 License:        GPL-3.0
 Summary:        GNU binary utilities
@@ -50,24 +41,6 @@ Group:          doc
 
 %description doc
 GNU binary utilities.
-
-%package locale
-License:        GPL-3.0
-Summary:        GNU binary utilities
-Group:          libs
-
-%description locale
-GNU binary utilities.
-
-
-%package extras
-License:        GPL-3.0
-Summary:        GNU binary utilities
-Group:          libs
-
-%description extras
-GNU binary utilities.
-
 
 
 %prep
@@ -114,14 +87,9 @@ install -d %{buildroot}%{_prefix}/include
 ln -s mingw %{buildroot}/usr/x86_64-w64-mingw32
 ln -s x86_64-w64-mingw32-windres %{buildroot}/usr/bin/windres
 
+rm -rf %{buildroot}/usr/share/info
+rm -rf %{buildroot}/usr/share/locale
 
-%find_lang binutils bin.lang
-%find_lang bfd bfd.lang
-%find_lang gas gas.lang
-%find_lang gprof gprof.lang
-%find_lang ld ld.lang
-%find_lang opcodes opcodes.lang
-cat *.lang > %{name}.lang
 
 %files
 /usr/x86_64-w64-mingw32
@@ -180,17 +148,5 @@ cat *.lang > %{name}.lang
 %exclude /usr/bin/readelf
 %exclude /usr/bin/strip
 
-%files extras
-
-%files dev
-
 %files doc
 /usr/share/man/
-%exclude /usr/share/info/as.info
-%exclude /usr/share/info/bfd.info
-%exclude /usr/share/info/binutils.info
-%exclude /usr/share/info/gprof.info
-%exclude /usr/share/info/ld.info
-
-%files locale
-%exclude /usr/share/locale/
