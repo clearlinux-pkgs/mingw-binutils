@@ -2,13 +2,13 @@
 %define binutils_target %{_arch}-generic-linux
 
 Name:           mingw-binutils
-Version:        2.38
-Release:        449
+Version:        2.39
+Release:        450
 License:        GPL-3.0
 Summary:        GNU binary utilities
-Url:            http://www.gnu.org/software/binutils/
+Url:            https://www.gnu.org/software/binutils/
 Group:          devel
-Source0:        https://mirrors.kernel.org/gnu/binutils/binutils-2.38.tar.xz
+Source0:        https://mirrors.kernel.org/gnu/binutils/binutils-2.39.tar.xz
 AutoReqProv:    No
 BuildRequires:  flex
 BuildRequires:  libstdc++-dev
@@ -44,7 +44,7 @@ GNU binary utilities.
 
 
 %prep
-%setup -q -n binutils-2.38
+%setup -q -n binutils-%{version}
 
 %patch1 -p1
 %patch2 -p1
